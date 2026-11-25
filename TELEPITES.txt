@@ -1,0 +1,36 @@
+KARÁCSONYI TITKOS HÚZÁS – 8 FŐS TELEPÍTÉS
+
+A csomag tartalma:
+- index.html: mobilbarát, zöld-arany weboldal (Gaga, Zsófi, Judit, Ricsi, Ancsi, Hedi, Viki, Lili)
+- netlify/functions/huzas.mjs: szerveroldali belépés és húzás
+- netlify.toml, package.json: Netlify beállítások
+- PIN_KODOK_PRIVAT.txt: a 8 személyes kód (bizalmas)
+
+FONTOS: A PIN_KODOK_PRIVAT.txt fájlt SOHA ne töltsd fel GitHubra vagy Netlifyra.
+
+NETLIFY TELEPÍTÉS:
+1. Csomagold ki a ZIP-et.
+2. Hozz létre egy PRIVÁT GitHub repositoryt.
+3. Tölts fel minden fájlt és mappát, KIVÉVE a PIN_KODOK_PRIVAT.txt fájlt.
+4. Netlifyban: Add new project / Import an existing project, válaszd a GitHubot, majd a repositoryt.
+5. Build command: npm install
+   Publish directory: .
+   Functions directory: netlify/functions
+6. Deploy.
+7. A Netlify által adott webcímet oszd meg a résztvevőkkel.
+
+NYILVÁNOS LINK:
+A weboldal linkje nyilvánosan megnyitható, ha a Netlify site nincs jelszóval védve és nincs bekapcsolva a Netlify access control / site password protection. A GitHub repository maradhat PRIVÁT; ettől a telepített weboldal URL-je még lehet publikus. A link birtokában bárki megnyithatja az oldalt, de a húzáshoz a névhez tartozó PIN kell.
+
+PIN KÓDOK:
+A PIN_KODOK_PRIVAT.txt fájlból mindenkinek csak a saját kódját küldd el privátban.
+
+MŰKÖDÉS:
+- 8 névhez egy véletlenszerű, egyedi címzett tartozik.
+- Senki nem húzza saját magát, mindenkit pontosan egy ember húz.
+- Minden név egyszer húzhat.
+- A szerver rögzíti a sikeres húzásokat.
+- A státuszlista 12 másodpercenként frissül.
+
+MEGJEGYZÉS:
+Ez a verzió új Netlify Blobs tárolónevet használ. A régi 7 fős változat húzásaitól elkülönül.
